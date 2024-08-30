@@ -6,7 +6,7 @@
 /*   By: ogokkaya <ogokkaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 18:54:26 by ogokkaya          #+#    #+#             */
-/*   Updated: 2024/06/08 22:11:37 by ogokkaya         ###   ########.fr       */
+/*   Updated: 2024/08/30 21:58:33 by ogokkaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ void	*just_one_philo(void *arg)
 	t_philo	*philo;
 
 	philo = arg;
-	philo->table->onset = get_time();
 	pthread_mutex_lock(&philo->table->mutex_chopstick[philo->left_chopstick]);
 	write_all(L_CHOPSTICK, philo);
 	pthread_mutex_unlock(&philo->table->mutex_chopstick[philo->left_chopstick]);

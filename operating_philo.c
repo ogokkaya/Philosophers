@@ -47,9 +47,9 @@ int	philo_cycle(t_philo *philo, t_table *table)
 {
 	if (eating(philo, table) == FALSE)
 		return (FALSE);
-	philo_sleep(philo->table->time_to_sleep);
 	if (write_all(SLEEP, philo) == FALSE)
 		return (FALSE);
+	philo_sleep(philo->table->time_to_sleep);
 	if (write_all(THINK, philo) == FALSE)
 		return (FALSE);
 	return (TRUE);
